@@ -3,11 +3,15 @@
     private static void Main(string[] args)
     {
         int n, v=0,a=0,r = 0;
-        
-        n = 1;
+        String s="v";
 
-        while (n >= 0& n<=9) {
-            Console.WriteLine("Ingrese su ultimo número de placa");
+
+        Console.WriteLine("¿Desea continuar con el programa? (v/f)");
+        s = Console.ReadLine().ToLower();
+
+        while (s == "v") {
+            
+            Console.WriteLine("Ingrese el ultimo número de placa");
             n = int.Parse(Console.ReadLine());
             if (n >= 0 & n <= 3) {
                 v++;
@@ -17,6 +21,8 @@
             {
                 r++;
             }
+            Console.WriteLine("¿Desea continuar con el programa? (v/f)");
+            s = Console.ReadLine().ToLower();
         }
         Console.WriteLine("PROGRAMA TERMINADO");
         Console.WriteLine($"Verde: {v}");
