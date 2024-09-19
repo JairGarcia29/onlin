@@ -24,10 +24,12 @@
             Console.WriteLine("¿Desea continuar con el programa? (v/f)");
             s = Console.ReadLine().ToLower();
         }
+
         Console.WriteLine("PROGRAMA TERMINADO");
         Console.WriteLine($"Verde: {v}");
         Console.WriteLine($"Azul: {a}");
         Console.WriteLine($"Rojo: {r}");
+        Console.WriteLine($"Total de autos: {a+v+r}");
 
 
     }

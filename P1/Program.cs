@@ -19,6 +19,11 @@ internal class Program
         Console.WriteLine("Ingrese lo ganado en ventas (s/.)");
         v = double.Parse(Console.ReadLine());
 
+        while (v < 0) {
+            Console.WriteLine("Error... Ingrese lo ganado en ventas");
+            v = double.Parse(Console.ReadLine());
+        }
+
         Console.WriteLine("Ingrese sus años en la empresa");
         año = int.Parse(Console.ReadLine());
         while (año < 0 ) {
