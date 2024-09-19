@@ -9,20 +9,31 @@ internal class Program
         int año;
         Console.WriteLine("Ingrese su nombre");
         nomb = Console.ReadLine();
+
         Console.WriteLine("Ingrese su salario bruto del mes");
         sal = double.Parse(Console.ReadLine());
+        while (sal <=0) {
+            Console.WriteLine("Error... Ingrese su salario bruto del mes");
+            sal = double.Parse(Console.ReadLine());
+        }
         Console.WriteLine("Ingrese lo ganado en ventas (s/.)");
         v = double.Parse(Console.ReadLine());
         Console.WriteLine("Ingrese sus años en la empresa");
         año = int.Parse(Console.ReadLine());
 
-        if (v <= 600) {
+        if (v <= 600)
+        {
             co = v * 0.05;
-        } else if (v > 600 & v <= 3000) {
+        }
+        else if (v > 600 & v <= 3000)
+        {
             co = v * 0.07;
-        } else if (v > 3000) {
+        }
+        else if (v > 3000)
+        {
             co = (v * 0.06) + 300;
         }
+        
 
         salb = sal + co;
 
